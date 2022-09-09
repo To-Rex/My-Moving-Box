@@ -1,0 +1,16 @@
+<html>
+    <div id="my_box_realtime" style= "background-color: red; position: absolute; right: 70; bottom: 70; min-width: 100px; min-height: 100px"></div>
+    <script type="text/javascript">
+        var my_box = document.querySelector("#my_box_realtime")
+        var id = setInterval(move, 100)
+        var speed = 350
+        function move() {
+            if (speed == 0) {
+                clearInterval(id)
+            }
+            speed -= 10
+            my_box.style.right = speed + "px"
+            my_box.style.bottom = speed + "px"
+        }
+    </script>
+</html>
